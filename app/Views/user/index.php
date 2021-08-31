@@ -10,11 +10,11 @@
             <div class="card mb-3" style="max-width: 540px;">
                 <div class="row g-0">
                     <div class="col-md-4">
-                        <img src="<?= base_url('/img/' . user()->user_image); ?>" class="img-fluid rounded-start" alt="<?= user()->username; ?>">
+                        <img src="<?= base_url('/img/' . user()->user_image); ?>" class="card-img" alt="<?= user()->username; ?>">
                     </div>
                     <div class="col-md-8">
                         <div class="card-body">
-                            <a href="#" class="card-link">Edit Profile</a>
+                            <a href="<?= base_url('user/edit'); ?>" class="card-link">Edit Profile</a>
                         </div>
                         <div class="card-body">
                             <ul class="list-group list-group-flush">
@@ -28,6 +28,9 @@
                                 <?php endif; ?>
                                 <li class="list-group-item">
                                     <?= user()->email; ?>
+                                </li>
+                                <li class="list-group-item">
+                                    <small class="text-muted">Since <?= date('d F Y'); ?></small>
                                 </li>
                             </ul>
                         </div>

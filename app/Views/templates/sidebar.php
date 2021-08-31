@@ -8,10 +8,20 @@
         <div class="sidebar-brand-text mx-3">AlfaOmega Group</div>
     </a>
 
-    <?php if (in_groups('admin')) : ?>
+    <?php if (in_groups('leader')) : ?>
 
         <!-- Divider -->
         <hr class="sidebar-divider">
+
+        <li class="nav-item">
+            <a class="nav-link pt-0" href="<?= base_url('leader'); ?>">
+                <i class="fas fa-tachometer-alt"></i>
+                <span>Dashboard</span></a>
+        </li>
+
+        <!-- Divider -->
+        <hr class="sidebar-divider">
+
 
         <!-- Heading -->
         <div class="sidebar-heading">
@@ -20,14 +30,15 @@
 
         <!-- Nav Item - User List -->
         <li class="nav-item">
-            <a class="nav-link" href="<?= base_url('admin'); ?>">
+            <a class="nav-link" href="<?= base_url('admin/user_list'); ?>">
                 <i class="fas fa-users"></i>
                 <span>User List</span></a>
         </li>
-    <?php endif; ?>
 
-    <!-- Divider -->
-    <hr class="sidebar-divider">
+        <!-- Divider -->
+        <hr class="sidebar-divider">
+
+    <?php endif; ?>
 
 
 

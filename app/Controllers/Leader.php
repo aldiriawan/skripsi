@@ -4,7 +4,7 @@ namespace App\Controllers;
 
 use function PHPUnit\Framework\isEmpty;
 
-class Admin extends BaseController
+class Leader extends BaseController
 {
 
     protected $db, $builder;
@@ -18,8 +18,8 @@ class Admin extends BaseController
     public function index()
     {
 
-        $data['page_title'] = 'Admin';
-        return view('admin/index', $data);
+        $data['page_title'] = 'Dashboard';
+        return view('leader/index', $data);
     }
     public function user_list()
     {
