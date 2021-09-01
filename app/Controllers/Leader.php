@@ -50,7 +50,7 @@ class Leader extends BaseController
         $data['user'] = $query->getRow();
 
         if (empty($data['user'])) {
-            return redirect()->to('/admin');
+            return redirect()->to('/leader');
         }
 
         return view('admin/detail', $data);

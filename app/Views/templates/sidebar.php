@@ -8,7 +8,7 @@
         <div class="sidebar-brand-text mx-3">AlfaOmega Group</div>
     </a>
 
-    <?php if (in_groups('leader')) : ?>
+    <?php if (in_groups(['leader', 'admin'])) : ?>
 
         <!-- Divider -->
         <hr class="sidebar-divider">

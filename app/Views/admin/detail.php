@@ -36,7 +36,7 @@
                                     <small class="text-muted">Since <?= date('d F Y'); ?></small>
                                 </li>
                                 <li class="list-group-item">
-                                    <small><a href="<?= base_url('admin'); ?>">&laquo; Back to User List</a></small>
+                                    <small><a href="<?= base_url('admin/user_list'); ?>">&laquo; Back to User List</a></small>
                                 </li>
                             </ul>
                         </div>

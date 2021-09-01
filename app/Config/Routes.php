@@ -33,10 +33,9 @@ $routes->setAutoRoute(true);
 // route since we don't have to scan directories.
 $routes->get('/', 'User::index');
 
-$routes->get('/admin', 'Admin::index', ['filter' => 'role:admin', 'filter' => 'role:leader']);
-$routes->get('/admin/index', 'Admin::index', ['filter' => 'role:admin', 'filter' => 'role:leader']);
-$routes->get('/admin/(:num)', 'Admin::detail/$1', ['filter' => 'role:admin']);
-
+$routes->get('/admin', 'Admin::index', ['filter' => 'role:admin,leader']);
+$routes->get('/admin/index', 'Admin::index', ['filter' => 'role:admin,leader']);
+$routes->get('/admin/(:num)', 'Admin::detail/$1', ['filter' => 'role:admin,leader']);
 $routes->get('/leader', 'Leader::index', ['filter' => 'role:leader']);
 $routes->get('/leader/index', 'Leader::index', ['filter' => 'role:leader']);
 
