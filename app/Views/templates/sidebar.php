@@ -8,7 +8,7 @@
         <div class="sidebar-brand-text mx-3">AlfaOmega Group</div>
     </a>
 
-    <?php if (in_groups(['leader', 'admin'])) : ?>
+    <?php if (in_groups('leader')) : ?>
 
         <!-- Divider -->
         <hr class="sidebar-divider">
@@ -19,9 +19,24 @@
                 <span>Dashboard</span></a>
         </li>
 
+    <?php endif; ?>
+
+    <?php if (in_groups('admin')) : ?>
+
         <!-- Divider -->
         <hr class="sidebar-divider">
 
+        <li class="nav-item">
+            <a class="nav-link pt-0" href="<?= base_url('admin'); ?>">
+                <i class="fas fa-tachometer-alt"></i>
+                <span>Dashboard</span></a>
+        </li>
+
+    <?php endif; ?>
+    <!-- Divider -->
+    <hr class="sidebar-divider">
+
+    <?php if (in_groups(['leader', 'admin'])) : ?>
 
         <!-- Heading -->
         <div class="sidebar-heading">
