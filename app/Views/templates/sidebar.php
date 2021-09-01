@@ -33,6 +33,18 @@
         </li>
 
     <?php endif; ?>
+    <?php if (in_groups('checker')) : ?>
+
+        <!-- Divider -->
+        <hr class="sidebar-divider">
+
+        <li class="nav-item">
+            <a class="nav-link pt-0" href="<?= base_url('checker'); ?>">
+                <i class="fas fa-tachometer-alt"></i>
+                <span>Dashboard</span></a>
+        </li>
+
+    <?php endif; ?>
     <!-- Divider -->
     <hr class="sidebar-divider">
 

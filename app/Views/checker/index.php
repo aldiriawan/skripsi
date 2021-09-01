@@ -4,7 +4,7 @@
 <div class="container-fluid">
 
     <!-- Page Heading -->
-    <h1 class="h3 mb-4 text-gray-800">Admin Page</h1>
+    <h1 class="h3 mb-4 text-gray-800">Checker Page</h1>
 
     <div id="content-wrapper" class="d-flex flex-column">
 

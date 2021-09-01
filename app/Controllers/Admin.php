@@ -18,7 +18,7 @@ class Admin extends BaseController
     public function index()
     {
 
-        $data['page_title'] = 'Admin';
+        $data['page_title'] = 'Admin Page';
         return view('admin/index', $data);
     }
     public function user_list()
