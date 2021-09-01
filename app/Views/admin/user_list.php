@@ -4,11 +4,14 @@
 <div class="container-fluid">
 
     <!-- Page Heading -->
-    <h1 class="h3 mb-4 text-gray-800">User List</h1>
+    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+        <h1 class="h3 mb-0 text-gray-800">Daftar Karyawan</h1>
+        <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i class="fas fa-fw fa-plus fa-sm text-white-50"></i> Tambah Karyawan Baru</a>
+    </div>
 
     <div class="row">
         <div class="col-lg-8">
-            <table class="table">
+            <table class="table table-hover text-center">
                 <thead>
                     <tr>
                         <th scope="col">#</th>
