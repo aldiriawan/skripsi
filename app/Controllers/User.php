@@ -16,15 +16,19 @@ class User extends BaseController
 	public function index()
 	{
 		$data['page_title'] = 'My Profile';
-		return view('user/index', $data);
-	}
-
-	public function edit($id = 0)
-	{
-		$data['page_title'] = 'Edit Profile';
-		$this->builder->select('users.id as userid, username, email, fullname, user_image');
+		$this->builder->select('users.id as userid, username, email, fullname, user_image, name');
+		$this->builder->join('auth_groups_users', 'auth_groups_users.user_id = users.id');
+		$this->builder->join('auth_groups', 'auth_groups.id = auth_groups_users.group_id');
+		$this->builder->where('users.id', user_id());
 		$query = $this->builder->get();
+
 		$data['user'] = $query->getRow();
-		return view('user/edit', $data);
+
+		if (empty($data['user'])) {
+			return redirect()->to('/admin');
+		}
+
+
+		return view('user/index', $data);
 	}
 }

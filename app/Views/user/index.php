@@ -4,41 +4,46 @@
 <div class="container-fluid">
 
     <!-- Page Heading -->
-    <h1 class="h3 mb-4 text-gray-800">My Profile</h1>
+    <h1 class="h3 mb-0 text-gray-800">My Profile</h1>
     <div class="row">
-        <div class="col-lg-8">
-            <div class="card mb-3" style="max-width: 540px;">
-                <div class="row g-0">
-                    <div class="col-md-4">
-                        <img src="<?= base_url('/img/' . user()->user_image); ?>" class="card-img" alt="<?= user()->username; ?>">
-                    </div>
-                    <div class="col-md-8">
-                        <div class="card-body">
-                            <a href="<?= base_url('user/edit'); ?>" class="card-link">Edit Profile</a>
-                        </div>
-                        <div class="card-body">
-                            <ul class="list-group list-group-flush">
-                                <li class="list-group-item">
-                                    <?= user()->username; ?>
-                                </li>
-                                <?php if (user()->fullname) : ?>
-                                    <li class="list-group-item">
-                                        <?= user()->fullname; ?>
-                                    </li>
-                                <?php endif; ?>
-                                <li class="list-group-item">
-                                    <?= user()->email; ?>
-                                </li>
-                                <li class="list-group-item">
-                                    <small class="text-muted">Since <?= date('d F Y'); ?></small>
-                                </li>
-                            </ul>
+        <div class="col-12 col-sm8- offset-sm-2 col-md-6 offset-md-3 pt-3 pb-3">
+            <div class="container text-center">
+                <form class="" action="/profile" method="post">
+                    <div class="row">
+                        <div class="col-md-4 rounded d-block mx-auto">
+                            <img src="<?= base_url('/img/' . user()->user_image); ?>" class=" img-fluid rounded-start" alt="<?= user()->username; ?>">
                         </div>
                     </div>
-                </div>
+                    <div class="row">
+                        <div class="col-12 col-sm-6">
+                            <div class="form-group">
+                                <label for="username">Username</label>
+                                <input type="text" class="form-control" readonly name="username" value="<?= user()->username; ?>">
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-6">
+                            <div class="form-group">
+                                <label for="email">Email Address</label>
+                                <input type="text" class="form-control" readonly value="<?= user()->email; ?>">
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-6">
+                            <div class="form-group">
+                                <label for="fullname">Fullname</label>
+                                <input type="text" class="form-control" readonly name="fullname" value="<?= user()->fullname; ?>">
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-6">
+                            <label for="role">Role</label>
+                            <input type="text" class="form-control" readonly name="role" value="<?= $user->name; ?>">
+                            </span>
+                        </div>
+                    </div>
+                    <small class="text-muted">Since <?= date('d F Y'); ?></small>
+                </form>
             </div>
         </div>
     </div>
-
 </div>
+
 <?= $this->endSection(); ?>

@@ -10,12 +10,12 @@
     </div>
 
     <div class="row">
-        <div class="col-lg-8">
-            <table class="table table-hover text-center">
+        <div class="d-block mx-auto">
+            <table class="table table-hover">
                 <thead>
                     <tr>
                         <th scope="col">#</th>
-                        <th scope="col">Username</th>
+                        <th scope="col">Fullname</th>
                         <th scope="col">Email</th>
                         <th scope="col">Role</th>
                         <th scope="col">Action</th>
@@ -26,7 +26,7 @@
                     <?php foreach ($users as $user) : ?>
                         <tr>
                             <th scope="row"><?= $i++; ?></th>
-                            <td><?= $user->username; ?></td>
+                            <td><?= $user->fullname; ?></td>
                             <td><?= $user->email; ?></td>
                             <td><?= $user->name; ?></td>
                             <td>
