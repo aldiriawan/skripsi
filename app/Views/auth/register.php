@@ -26,6 +26,9 @@
                                     <div class="form-group">
                                         <input type="text" class="form-control form-control-user <?php if (session('errors.username')) : ?>is-invalid<?php endif ?>" name="username" placeholder="<?= lang('Auth.username') ?>" value="<?= old('username') ?>">
                                     </div>
+                                    <div class="form-group">
+                                        <input type="text" class="form-control form-control-user" name="fullname" placeholder="Fullname" value="<?= old('fullname') ?>">
+                                    </div>
                                     <div class=" form-group row">
                                         <div class="col-sm-6 mb-3 mb-sm-0">
                                             <input type="password" class="form-control form-control-user <?php if (session('errors.password')) : ?>is-invalid<?php endif ?>" name="password" placeholder="<?= lang('Auth.password') ?>" autocomplete="off">
@@ -39,9 +42,6 @@
                                     </button>
                                 </form>
                                 <hr>
-                                <div class="text-center">
-                                    <a class="small" href="forgot-password.html">Forgot Password?</a>
-                                </div>
                                 <div class="text-center">
                                     <p><a class="small" href="<?= route_to('login') ?>"><?= lang('Auth.alreadyRegistered') ?> <?= lang('Auth.signIn') ?></a>
                                 </div>
